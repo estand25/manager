@@ -16,8 +16,8 @@ const RouterComponent = () => (
       <Scene
         key="employeeList"
         component={EmployeeList}
+        titleStyle={{ alignSelf: 'center' }}
         title="Employees"
-
       />
     </Scene>
   </Router>
