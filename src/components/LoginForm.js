@@ -24,7 +24,7 @@ class LoginForm extends Component {
   renderError() {
     if (this.props.error) {
         return (
-          <View style={{ backgroundColor: 'white' }} >
+          <View style={{ backgroundColor: 'white', alignSelf: 'center' }} >
             <Text style={styles.errorTextStyle}>
               {this.props.error}
             </Text>
@@ -82,7 +82,6 @@ class LoginForm extends Component {
 const styles = {
   errorTextStyle: {
     fontSize: 20,
-    textAlign: 'center',
     color: 'red'
   }
 };
