@@ -41,5 +41,5 @@ export const loginUser = ({ email, password }) => (dispatch) => {
     });
 
     console.log('about to go to another component byeee...');
-    Actions.employeeList(null);
+    Actions.main(null);
   };
