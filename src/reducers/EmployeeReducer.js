@@ -3,7 +3,9 @@ import {
 } from '../actions/types';
 
 const INITAL_STATE = {
-
+  name: '',
+  phone: '',
+  shift: ''
 };
 
 export default (state = INITAL_STATE, action) => {
