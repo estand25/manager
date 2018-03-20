@@ -4,9 +4,9 @@ import { View, Text, FlatList } from 'react-native';
 import { employeesFetch } from '../actions';
 
 class EmployeeList extends Component {
-  componentWillMount() {
-    this.props.employeesFetch();
-  }
+  // componentWillMount() {
+  //   this.props.employeesFetch();
+  // }
 
   renderRow({ item }) {
     const { name, phone, shift } = item;
@@ -21,11 +21,13 @@ class EmployeeList extends Component {
   }
 
   render() {
+    console.log(this.props.employees);
     return (
+      // <Text>'dd'</Text>
       <FlatList
         data={this.props.employees}
-        renderItem={this.renderRow()}
-        keyExtractor={(item) => item}
+        renderItem={this.renderRow}
+        keyExtractor={(employee) => employee.item}
       />
     );
   }
