@@ -11,12 +11,10 @@ class EmployeeList extends Component {
   }
 
   renderItem({ item }) {
-    console.log(item);
     return <ListItem employee={item} />;
   }
 
   render() {
-    console.log(this.props);
     return (
       <FlatList
         data={this.props.employees}
