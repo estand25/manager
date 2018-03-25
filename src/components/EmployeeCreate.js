@@ -12,6 +12,7 @@ class EmployeeCreate extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <Card>
         <EmployeeForm {...this.props} />

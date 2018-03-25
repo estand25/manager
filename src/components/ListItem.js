@@ -5,11 +5,10 @@ import { CardSection } from './common';
 
 class ListItem extends Component {
   onRowPress() {
-    Actions.employeeEdit({ item: this.props.employee });
+    Actions.employeeEdit({ employee: this.props.employee });
   }
 
   render() {
-    console.log(this.props.employee);
     const { name } = this.props.employee;
 
     return (

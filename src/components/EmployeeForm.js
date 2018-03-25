@@ -30,7 +30,7 @@ class EmployeeForm extends Component {
           <Text style={styles.pickerTextStyle}>Shift</Text>
           <Picker
             selectedValue={this.props.shift}
-            onValueChange={value => this.props.employeeUpdate({ props: 'shift', value })}
+            onValueChange={text => this.props.employeeUpdate({ props: 'shift', value: text })}
           >
             <Picker.Item label="Monday" value="Monday" />
             <Picker.Item label="Tuesday" value="Tuesday" />
