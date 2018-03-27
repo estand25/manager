@@ -2,12 +2,24 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, CardSection, Button } from './common';
-import { employeeUpdate, employeeSave } from '../actions';
+import { employeeUpdate, employeeSave, employeeClear } from '../actions';
 import EmployeeForm from './EmployeeForm';
 
 class EmployeeEdit extends Component {
   componentWillMount() {
     _.each(this.props.employee, (value, props) => {
+      this.props.employeeUpdate({ props, value });
+    });
+  }
+
+  componentWillUnmount() {
+    const clearData = {
+      name: '',
+      phone: '',
+      shift: 'Monday'
+    };
+
+    _.each(clearData, (value, props) => {
       this.props.employeeUpdate({ props, value });
     });
   }
@@ -39,4 +51,4 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps,
-  { employeeUpdate, employeeSave })(EmployeeEdit);
+  { employeeUpdate, employeeSave, employeeClear })(EmployeeEdit);

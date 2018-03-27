@@ -12,10 +12,9 @@ class EmployeeCreate extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <Card>
-        <EmployeeForm {...this.props} />
+        <EmployeeForm />
         <CardSection>
           <Button onPress={this.onButtonPress.bind(this)}>
             Create
