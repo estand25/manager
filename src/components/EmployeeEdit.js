@@ -7,7 +7,7 @@ import { employeeUpdate, employeeSave, employeeDelete } from '../actions';
 import EmployeeForm from './EmployeeForm';
 
 class EmployeeEdit extends Component {
-  state = {showModal: false};
+  state = { showModal: false };
 
   componentWillMount() {
     _.each(this.props.employee, (value, props) => {
@@ -40,7 +40,9 @@ class EmployeeEdit extends Component {
   }
 
   onAcceptConfirm() {
+    const { uid } = this.props.employee;
 
+    this.props.employeeDelete({ uid });
   }
 
   onDeclineConfirm() {
