@@ -4,13 +4,15 @@ import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
-// import LoginForm from './components/LoginForm';
 import Router from './Router';
+import {
+  firebaseApiKey
+} from './src/firebaseApiKey';
 
 class App extends Component {
   componentWillMount() {
     const config = {
-      apiKey: 'AIzaSyAHWKmdHEz0bVZmuIxr0Qq87uhOb7gNnIs',
+      apiKey: firebaseApiKey,
       authDomain: 'manager-16bbd.firebaseapp.com',
       databaseURL: 'https://manager-16bbd.firebaseio.com',
       projectId: 'manager-16bbd',
